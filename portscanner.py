@@ -11,14 +11,14 @@ port_max = 65535
 
 open_ports = []
 while True:
-    ip_add_entered = input("\nPlease enter the ip address that you want to scan: ")
+    ip_add_entered = input("\n[+] Please enter the ip address that you want to scan: ")
     if ip_add_pattern.search(ip_add_entered):
-        print(f"{ip_add_entered} is a valid ip address")
+        print(f"[+] {ip_add_entered} is a valid ip address")
         break
 
 while True:
-    print("Please enter the range of ports you want to scan in format: <int>-<int> (ex would be 60-120)")
-    port_range = input("Enter port range: ")
+    print("[+] Please enter the range of ports you want to scan in format: <min>-<max> (eg 60-120)")
+    port_range = input("[+] Enter port range: ")
     port_range_valid = port_range_pattern.search(port_range.replace(" ",""))
     if port_range_valid:
         port_min = int(port_range_valid.group(1))
