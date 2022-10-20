@@ -14,7 +14,7 @@ while True:
         break
 #taking port range to scan
 while True:
-    print("Please enter the range of ports you want to scan in format: <int>-<int> (ex would be 60-120)")
+    print("Please enter the range of ports you want to scan in format: <min>-<max> (eg 60-120)")
     port_range = input("Enter port range: ")
     port_range_valid = port_range_pattern.search(port_range.replace(" ",""))
     if port_range_valid:
